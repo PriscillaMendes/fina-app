@@ -42,3 +42,4 @@ public class GetTransactionByPeriodEndpoint : IEndpoint
             : TypedResults.BadRequest(result);
 
     }
+}
