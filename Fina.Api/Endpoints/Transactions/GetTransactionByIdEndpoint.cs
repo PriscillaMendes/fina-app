@@ -12,7 +12,7 @@ namespace Fina.Api.Endpoints.Transactions;
 public class GetTransactionByIdEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
-    => app.MapPost("/{id}", HandleAsync)
+    => app.MapGet("/{id}", HandleAsync)
             .WithName("Transactions: Get by Id")
             .WithSummary("Retorna uma transacao pelo id")
             .WithOrder(5)

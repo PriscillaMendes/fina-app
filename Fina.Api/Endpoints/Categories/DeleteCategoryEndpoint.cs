@@ -10,7 +10,7 @@ namespace Fina.Api.Endpoints.Categories;
 public class DeleteCategoryEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
-           => app.MapPost("/{id}", HandleAsync)
+           => app.MapDelete("/{id}", HandleAsync)
             .WithName("Categories: Delete")
             .WithSummary("Deleta uma categoria")
             .WithOrder(2)

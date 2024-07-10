@@ -12,8 +12,8 @@ namespace Fina.Api.Endpoints.Transactions;
 public class GetTransactionByPeriodEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
-           => app.MapPost("/", HandleAsync)
-            .WithName("Categories: Get All")
+           => app.MapGet("/", HandleAsync)
+            .WithName("Transactions: Get All")
             .WithSummary("Recupera todas as categoria")
             .WithOrder(4)
             .Produces<PagedResponse<List<Category>?>>();

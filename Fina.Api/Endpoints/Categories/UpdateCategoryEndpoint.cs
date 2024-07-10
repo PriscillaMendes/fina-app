@@ -9,9 +9,9 @@ namespace Fina.Api.Endpoints.Categories;
 public class UpdateCategoryEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
-           => app.MapPost("/{id}", HandleAsync)
-            .WithName("Categories: Delete")
-            .WithSummary("Deleta uma categoria")
+           => app.MapPut("/{id}", HandleAsync)
+            .WithName("Categories: Update")
+            .WithSummary("Atualiza uma categoria")
             .WithOrder(4)
             .Produces<Response<Category?>>();
 
